@@ -49,6 +49,19 @@ const sr = ScrollReveal({
     reset: true
 })
 
+/*===== SCROLL TO TOP =====*/
+var scrollToTopBtn = document.getElementById("scrollToTopBtn")
+var rootElement = document.documentElement
+
+function scrollToTop() {
+  // Scroll to top logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+scrollToTopBtn.addEventListener("click", scrollToTop)
+
 /*SCROLL HOME*/
 sr.reveal('.home__title', {})
 sr.reveal('.home__scroll', {delay: 200})
@@ -68,12 +81,6 @@ sr.reveal('.skills__img', {delay: 400})
 
 /*SCROLL PORTFOLIO*/
 sr.reveal('.portfolio__img', {interval: 200})
-
-/*SCROLL CONTACT*/
-sr.reveal('.contact__subtitle', {})
-sr.reveal('.contact__text', {interval: 200})
-sr.reveal('.contact__input', {delay: 400})
-sr.reveal('.contact__button', {delay: 600})
 
 
 
